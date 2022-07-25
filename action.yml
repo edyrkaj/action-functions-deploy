@@ -7,3 +7,8 @@ runs:
 branding:
   icon: 'cloud'
   color: 'green'
+inputs:
+  entrypoint:
+    description: 'The entrypoint of the function'
+    default: '.'
+    required: false
