@@ -23,10 +23,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - uses: jsryudev/deploy-firebase-functions@v0.0.2
+    - uses: edyrkaj/action-functions-deploy@v1
       env:
         FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
         FIREBASE_PROJECT: firebase-project-id
+        FUNCTIONS_LIST: "functions:fn1,functions:fn2"
 ```
 
 Deploy only when a tag starts with `v` is pushed:
@@ -43,8 +44,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - uses: jsryudev/deploy-firebase-functions@v0.0.2
+    - uses: edyrkaj/action-functions-deploy@v1
       env:
         FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
         FIREBASE_PROJECT: firebase-project-id
+        FUNCTIONS_LIST: "functions:fn1,functions:fn2"
 ```
